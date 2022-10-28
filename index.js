@@ -29,11 +29,6 @@ mongoose
     console.log(err);
   });
 
-
-app.use(
-  cors({ origin: "https://hear-me-out.vercel.app/", optionsSuccessStatus: 200 })
-);
-
 app.get("/", (req, res) => {
   res.send("Application successfully deployed!");
 });
