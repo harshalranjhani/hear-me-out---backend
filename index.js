@@ -29,10 +29,6 @@ mongoose
     console.log(err);
   });
 
-app.options(
-  "*",
-  cors({ origin: "https://hear-me-out.vercel.app/", optionsSuccessStatus: 200 })
-);
 
 app.use(
   cors({ origin: "https://hear-me-out.vercel.app/", optionsSuccessStatus: 200 })
