@@ -29,6 +29,10 @@ mongoose
     console.log(err);
   });
 
+app.get("/", (req, res) => {
+  res.send("Application successfully deployed!");
+});
+
 const welcomeMessage = `<!DOCTYPE html>
         <html lang="en">
         <head>
