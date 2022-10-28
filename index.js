@@ -29,6 +29,15 @@ mongoose
     console.log(err);
   });
 
+app.options(
+  "*",
+  cors({ origin: "https://hear-me-out.vercel.app/", optionsSuccessStatus: 200 })
+);
+
+app.use(
+  cors({ origin: "https://hear-me-out.vercel.app/", optionsSuccessStatus: 200 })
+);
+
 app.get("/", (req, res) => {
   res.send("Application successfully deployed!");
 });
@@ -137,7 +146,7 @@ app.post("/register", async (req, res) => {
 app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken;
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: "http://localhost:3000",
+    redirectUri: "https://hear-me-out.vercel.app/",
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     refreshToken,
@@ -171,6 +180,6 @@ app.get("/lyrics", async (req, res) => {
 
 const port = process.env.PORT || 5000;
 
-app.listen(port, () => {  
+app.listen(port, () => {
   console.log(`App is listening on port ${port}`);
 });
