@@ -33,6 +33,10 @@ app.get("/", (req, res) => {
   res.send("Application successfully deployed!");
 });
 
+app.get("/test", (req, res) => {
+  res.send("test works!");
+});
+
 const welcomeMessage = `<!DOCTYPE html>
         <html lang="en">
         <head>
