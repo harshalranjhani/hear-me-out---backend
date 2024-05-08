@@ -80,7 +80,7 @@ app.post("/login", async (req, res) => {
   const code = req.body.code;
   console.log(code);
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: process.env.REDIRECT_URI,
+    redirectUri: "https://hear-me-out.harshalranjhani.in/",
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
   });
