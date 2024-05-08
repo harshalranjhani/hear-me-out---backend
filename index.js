@@ -141,7 +141,7 @@ app.post("/register", async (req, res) => {
 app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken;
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: "https://hear-me-out.harshalranjhani.in/",
+    redirectUri: "https://hear-me-out.harshalranjhani.in",
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     refreshToken,
