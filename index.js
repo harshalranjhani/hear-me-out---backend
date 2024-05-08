@@ -100,9 +100,9 @@ app.post("/login", async (req, res) => {
 });
 
 let mailTransporter = nodemailer.createTransport({
-  service: "gmail",
+  service: "iCloud",
   auth: {
-    user: "yelpcamp.alerts@gmail.com",
+    user: "ranjhaniharshal@icloud.com",
     pass: process.env.APP_PASSWORD,
   },
 });
@@ -117,7 +117,7 @@ app.post("/register", async (req, res) => {
     const user = await new User({ email: email });
     await user.save();
     let mailDetails = {
-      from: "alerts.yelpcamp@gmail.com",
+      from: "noreply@harshalranjhani.in",
       to: email,
       subject: "Welcome to HearMeOut!",
       html: welcomeMessage,
